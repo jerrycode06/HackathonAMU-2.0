@@ -8,7 +8,7 @@
     border: 2px solid transparent;
 }
 header{
-    background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)) ,url(note.jpg);
+    background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)) ,url(../img/note.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;

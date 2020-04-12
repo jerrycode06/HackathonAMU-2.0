@@ -38,12 +38,15 @@ def view():
     return render_template('map.html')
 
 
+@app.route('/notify')
+def notify():
+    return render_template('notification.html')
 
-'''@app.route('/download')
+@app.route('/down')
 def download():
     path = 'Notification_System/Covid_Notification_System.zip'
 
-    return send_file(path, as_attachment=True)'''
+    return send_file(path, as_attachment=True)
 
 
 if __name__ == "__main__":
