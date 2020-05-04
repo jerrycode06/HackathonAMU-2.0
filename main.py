@@ -8,6 +8,8 @@ app = Flask(__name__)
 # Open file, where data is stored
 file = open('model.pkl', 'rb')
 model = pickle.load(file)
+# clf = model[0] when feature scaling is in effect
+# sc_X = model[1]
 file.close()
 
 
@@ -27,6 +29,7 @@ def check():
         diffBreath = int(dictData['diffBreath'])
 
         features = [fever, age, bodyPain, runnyNose, diffBreath]
+        # infProb = clf.predict_proba(sc_X.transform([inputFeatures]))[0][1] when feature scaling is in effect
         prob = model.predict_proba([features])[0][1]
 
         return render_template('view.html', prob = round(prob*100))
