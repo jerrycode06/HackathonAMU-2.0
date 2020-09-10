@@ -7,7 +7,7 @@ def notify(title, message):
     notification.notify(
         title = title,
         message = message,
-        app_icon = "C:\\Users\\Syed\\Documents\\Machine Learning\\HackAMU\\icon.ico",
+        app_icon = "icon.ico",
         timeout = 10
     )
 

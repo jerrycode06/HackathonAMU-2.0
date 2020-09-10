@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Status</title>
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/check.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <div class="loginbox">
@@ -12,9 +13,9 @@
             <h1>Check your Health status</h1>
             <form action='/check' method="POST">
                 <p>Fever</p>
-                <input type="text" id="fever" name="fever" placeholder="Enter Fever Value">
+                <input type="text" id="fever" name="fever" placeholder="Enter Fever Value" required>
                 <p>Your Age</p>
-                <input type="age" id='age' name="age" placeholder="Enter Age">
+                <input type="age" id='age' name="age" placeholder="Enter Age" required>
                 <div class="form-group">
                 <p>Body Pain ?</p>
                 <select class="form-control custom-select" id="bodyPain" name="bodyPain">
@@ -36,7 +37,7 @@
                     <option value="0">Little Difficulty</option>
                     <option value="1">Sever Difficulty</option>
                 </select>
-                </div>
+                </div><br>
                 <input type="submit" name="submit" value="Submit">
             </form>
             </div>
